@@ -1,0 +1,4 @@
+name: support_triage
+version: 0.1.0
+description: Triage support tickets (classify spam, reply, escalate)
+entrypoint: env:SupportTriageEnv

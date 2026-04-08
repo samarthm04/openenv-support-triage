@@ -1,0 +1,14 @@
+[project]
+name = "support-triage"
+version = "0.1.0"
+description = "Support Ticket Triage Environment"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "openenv-core",
+    "pydantic",
+    "openai"
+]
+
+[project.scripts]
+server = "server.app:main"
