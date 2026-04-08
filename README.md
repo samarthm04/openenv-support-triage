@@ -1,3 +1,11 @@
+---
+title: Support Triage Env
+emoji: 📧
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+---
 # OpenEnv Support Triage
 
 A real-world OpenEnv environment representing a customer support tier 1 triage task.
