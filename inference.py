@@ -86,6 +86,12 @@ async def run_task(client: AsyncOpenAI, task_difficulty: str):
             # Action string for logging
             action_str = json.dumps(action_dict)
 
+            # Robust LLM parsing: handle integers and missing prefixes
+            if "ticket_id" in action_dict and action_dict["ticket_id"] is not None:
+                action_dict["ticket_id"] = str(action_dict["ticket_id"])
+                if action_dict["ticket_id"].isdigit():
+                    action_dict["ticket_id"] = f"t{action_dict['ticket_id']}"
+
             action_obj = TriageAction(**action_dict)
             obs = env.step(action_obj)
 
